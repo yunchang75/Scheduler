@@ -27,7 +27,7 @@ The plannings are carried on the workflows. They are stored in S.txt, M.txt, L.t
 
 Workflows are read from those files by `Definitions.WorkflowReader.reader.read_jobs` function. The read instance is a list of `Definitions.Graph` instances. A `Graph` class provides required information and operation on a set of `Task` instances (implemented in the same file).
 
-I have generated several scientific workflows (SIPHT, CyberShake, LIGO, Montage, and Epigenomics) using Pegasus, and stored them in a straightforward (but not standard) text format. I have also developed a minimal javascript tool to visualize those workflows. I'll add that to the project soon.
+I have generated several scientific workflows (SIPHT, CyberShake, LIGO, Montage, and Epigenomics) using Pegasus, and stored them in a straightforward (but not standard) text format. I have also developed a javascript tool to visualize those workflows [here](https://ralthor.github.io/wf2dot.html).
 
 ## Resources
 `Resources` class is implemented in `Definitions` folder. It provides the behavior we expect from the resources on a computing cluster. Since the proposed method is designed for computing clouds, where cost of the resources is important, `Resources` class is inherited by `CostAwareResources` class, considering the costs of the resources. Resource classes are responsible for assigning, querying, scheduling (on specific resource), showing, and saving the resources.
